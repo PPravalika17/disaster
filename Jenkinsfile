@@ -29,7 +29,7 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 echo "Deploying to Kubernetes"
-                bat 'kubectl set image deployment/kubedemoapp-deployment disaster-app=ppravalika/disaster-app:latest --record'
+               bat 'kubectl set image deployment/disaster-app disaster-app=ppravalika/disaster-app:latest'
                 bat 'kubectl apply -f service.yaml'
             }
         }
