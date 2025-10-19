@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Disaster Preparedness</title>
+<style>
+body { font-family: Arial, sans-serif; padding: 2rem; }
+.container { max-width: 600px; margin: 0 auto; }
+input[type=text] { width: 100%; padding: .5rem; font-size: 1rem; }
+button { padding: .6rem 1rem; font-size: 1rem; margin-top: .5rem; }
+.error { color: red; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Disaster Preparedness</h1>
+<p>Enter a disaster name (e.g., earthquake, flood, cyclone, fire) and click Submit to see precautions.</p>
+
+
+{% if error %}
+<p class="error">{{ error }}</p>
+{% endif %}
+
+
+<form method="post">
+<label for="disaster">Disaster name</label>
+<input type="text" id="disaster" name="disaster" placeholder="e.g. earthquake" required />
+<br />
+<button type="submit">Submit</button>
+</form>
+</div>
+</body>
+</html>

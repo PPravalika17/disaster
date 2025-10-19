@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Precautions - {{ disaster }}</title>
+<style>
+body { font-family: Arial, sans-serif; padding: 2rem; }
+.container { max-width: 800px; margin: 0 auto; }
+ul { margin-top: 1rem; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Precautions for: {{ disaster }}</h1>
+<ul>
+{% for p in precautions %}
+<li>{{ p }}</li>
+{% endfor %}
+</ul>
+
+
+<a href="/">Back</a>
+</div>
+</body>
+</html>
