@@ -14,7 +14,7 @@ app: disaster-app
 spec:
 containers:
 - name: disaster-app
-image: <DOCKERHUB_USERNAME>/disaster-app:latest
+image: ppravalika/disaster-app:latest
 ports:
 - containerPort: 5000
 imagePullPolicy: Always
