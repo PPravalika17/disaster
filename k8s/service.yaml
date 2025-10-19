@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-name: disaster-app-service
+  name: disaster-app-service
 spec:
-type: NodePort # Change to LoadBalancer if your k8s supports it
-selector:
-app: disaster-app
-ports:
-- protocol: TCP
-port: 80
-targetPort: 5000
-nodePort: 30081
+  type: NodePort  # Change to LoadBalancer if your k8s supports it
+  selector:
+    app: disaster-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+      nodePort: 30081
